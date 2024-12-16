@@ -1,6 +1,6 @@
 .feature-title {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-width: 600px;
     background-color: black;
     color: white;
@@ -10,7 +10,7 @@
 
 .feature {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-width: 600px;
     background-color: rgb(0, 0, 0);
     display: flex;
