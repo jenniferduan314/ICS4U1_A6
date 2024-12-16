@@ -29,6 +29,10 @@
     border-radius: 5px;
 }
 
+.movie-buy:hover {
+    background-color: #00ea79;
+}
+
 .movie-buy:active {
     background-color: #00fb82;
 }

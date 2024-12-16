@@ -12,7 +12,6 @@ function Details() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_TMDB_KEY}&append_to_response=videos`
             );
-            console.log(response.data);
             setMovie(response.data);
         }
         getDetails();
