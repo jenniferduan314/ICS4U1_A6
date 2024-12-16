@@ -4,8 +4,8 @@ import { useStoreContext } from "../context";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router";
 
-function Settings (){
-    const navigate = useNavigate ();
+function Settings() {
+    const navigate = useNavigate();
     const { firstName, setFirstName, lastName, setLastName, email, genreList, setGenreList } = useStoreContext();
     const [fName, setFName] = useState(firstName);
     const [lName, setLName] = useState(lastName);
@@ -56,36 +56,36 @@ function Settings (){
     }
 
     return (
-            <div className="hero">
-                <img src={Collage} alt="collage" id="hero-image"></img>
-                <div className="shadow"></div>
-                <div className="register-box">
-                    <button className="settings-back" type="submit" onClick={() => navigate(`/movies/genre/${genreList[0].id}`)}>Back</button>
-                    <div className="register-item">
-                        <div className="account-title">Edit Profile</div>
-                        <form onSubmit={(event) => changeName(event)}>
-                            <label className="account-text">First Name:</label>
-                            <input className="account-input" type="text" value={fName} onChange={() => setFName(event.target.value)}></input>
-                            <label className="account-text">Last Name:</label>
-                            <input className="account-input" type="text" value={lName} onChange={() => setLName(event.target.value)}></input>
-                            <label className="account-text">Email:</label>
-                            <input className="account-input" type="email" value={email} readOnly></input>
-                            <button className="settings-button" type="submit">Confirm Changes</button>
-                        </form>
+        <div className="hero">
+            <img src={Collage} alt="collage" id="hero-image"></img>
+            <div className="shadow"></div>
+            <div className="register-box">
+                <button className="settings-back" type="submit" onClick={() => navigate(`/movies/genre/${genreList[0].id}`)}>Back</button>
+                <div className="register-item">
+                    <div className="account-title">Edit Profile</div>
+                    <form onSubmit={(event) => changeName(event)}>
+                        <label className="account-text">First Name:</label>
+                        <input className="account-input" type="text" value={fName} onChange={() => setFName(event.target.value)}></input>
+                        <label className="account-text">Last Name:</label>
+                        <input className="account-input" type="text" value={lName} onChange={() => setLName(event.target.value)}></input>
+                        <label className="account-text">Email:</label>
+                        <input className="account-input" type="email" value={email} readOnly></input>
+                        <button className="settings-button" type="submit">Confirm Changes</button>
+                    </form>
+                </div>
+                <div className="register-item">
+                    <div className="account-genre">
+                        <div className="account-title">Genre Selection</div>
+                        <label>Please Select At Least 10 Genres</label>
                     </div>
-                    <div className="register-item">
-                        <div className="account-genre">
-                            <div className="account-title">Genre Selection</div>
-                            <label>Please Select At Least 10 Genres</label>
+                    {genres.map((item) => (
+                        <div className="account-genres" key={item.id}>
+                            <input className="account-genres" type="checkbox" id="check" ref={(el) => (checkboxesRef.current[item.id] = el)} />
+                            <label className="account-genres">{item.genre}</label>
                         </div>
-                        {genres.map((item) => (
-                            <div className="account-genres" key={item.id}>
-                                <input className="account-genres" type="checkbox" id="check" ref={(el) => (checkboxesRef.current[item.id] = el)} />
-                                <label className="account-genres">{item.genre}</label>
-                            </div>
-                        ))}
-                        <button className="settings-genre" onClick={() => updateGenres()}>Save Changes</button>
-                    </div>
+                    ))}
+                    <button className="settings-genre" onClick={() => updateGenres()}>Save Changes</button>
+                </div>
             </div>
         </div>
     )

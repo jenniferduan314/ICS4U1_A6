@@ -38,6 +38,7 @@ function Register() {
         if (password.current.value != rePass) {
             return alert("Passwords do not match. Please ensure your passwords match.");
         }
+
         const genreSelected = Object.keys(checkboxesRef.current)
             .filter((genreId) => checkboxesRef.current[genreId].checked)
             .map(Number);
@@ -89,8 +90,7 @@ function Register() {
                     </div>
                     {genres.map((item) => (
                         <div className="account-genres" key={item.id}>
-                            <input className="account-genres" type="checkbox" id="check"
-                                ref={(el) => (checkboxesRef.current[item.id] = el)} />
+                            <input className="account-genres" type="checkbox" id="check" ref={(el) => (checkboxesRef.current[item.id] = el)} />
                             <label className="account-genres">{item.genre}</label>
                         </div>
                     ))}

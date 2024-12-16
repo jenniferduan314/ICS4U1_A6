@@ -10,11 +10,11 @@
     border-radius: 5px;
 }
 
-.settings-back:hover{
+.settings-back:hover {
     background-color: #00fb82;
 }
 
-.settings-button{
+.settings-button {
     display: block;
     margin: 25px 0 0;
     width: 100%;
@@ -25,14 +25,14 @@
     text-align: center;
     background-color: #00d76f;
     font-size: 17px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
-.settings-button:hover{
-    background-color:#00984f;
+.settings-button:hover {
+    background-color: #00984f;
 }
 
-.settings-genre{
+.settings-genre {
     display: block;
     width: 100%;
     height: 35px;
@@ -42,9 +42,9 @@
     text-align: center;
     background-color: #00d76f;
     font-size: 17px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
-.settings-genre:hover{
-    background-color:#00984f;
+.settings-genre:hover {
+    background-color: #00984f;
 }

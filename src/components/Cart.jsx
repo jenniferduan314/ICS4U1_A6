@@ -11,19 +11,19 @@ function Cart() {
             <button className="cart-back" onClick={() => navigate(`/movies/genre/${genreList[0].id}`)}>Back</button>
             <label className="cart-title">Cart</label>
             <div className="cart-items">
-            {
-                cart.entrySeq().map(([key, movie]) => {
-                return (
-                    <div className="cart-item" key={key}>
-                        <img src={`https://image.tmdb.org/t/p/w500${movie.url}`} width={"250px"} />
-                        <label className="cart-movie">{movie.title}</label>
-                        <button className="cart-button" onClick={() => setCart((prevCart) => prevCart.delete(key))}>Remove</button>
-                    </div>
-                )
-                })
-            }
+                {
+                    cart.entrySeq().map(([key, movie]) => {
+                        return (
+                            <div className="cart-item" key={key}>
+                                <img src={`https://image.tmdb.org/t/p/w500${movie.url}`} width={"250px"} />
+                                <label className="cart-movie">{movie.title}</label>
+                                <button className="cart-button" onClick={() => setCart((prevCart) => prevCart.delete(key))}>Remove</button>
+                            </div>
+                        )
+                    })
+                }
             </div>
-      </div>
+        </div>
     )
 }
 
