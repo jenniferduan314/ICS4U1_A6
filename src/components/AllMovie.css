@@ -1,4 +1,4 @@
-.movies-container{
+.movies-container {
     width: 75%;
     display: flex;
     flex-wrap: wrap;
@@ -9,17 +9,36 @@
     border-style: solid;
 }
 
-.movie-poster{
+.movie-box {
     width: 180px;
-    padding: 3px 17px;
+    margin: 3px 17px;
 }
 
-.movies-pages{
+.movie-poster {
+    width: 100%;
+}
+
+.movie-buy {
+    width: 100%;
+    color: white;
+    background-color: #00d56e;
+    border-color: transparent;
+    font-size: 15px;
+    padding: 5px;
+    margin: 0 0 10px;
+    border-radius: 5px;
+}
+
+.movie-buy:active {
+    background-color: #00fb82;
+}
+
+.movies-pages {
     width: 100%;
     text-align: center;
 }
 
-.movies-numbers{
+.movies-numbers {
     color: white;
     font-size: 20px;
 }

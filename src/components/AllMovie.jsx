@@ -2,8 +2,10 @@ import "./AllMovie.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
+import { useStoreContext } from "../context";
 
 function AllMovies() {
+    const { cart, setCart } = useStoreContext();
     const [movies, setMovies] = useState([]);
     const { id } = useParams();
     const [page, setPage] = useState(1);
@@ -42,12 +44,24 @@ function AllMovies() {
         navigate(`/movies/details/${id}`);
     }
 
+    function addToCart(movie) {
+        const movieDetails = {
+            title: movie.original_title,
+            url: movie.poster_path,
+        };
+        setCart((prevCart) => prevCart.set(movie.id, movieDetails));
+    }
+
     return (
         <div className="movies-container">
             {movies.map((movie) => (
-                <div key={movie.id} className="movie" onClick={() => Details(movie.id)}>
-                    <img className="movie-poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}></img>
+                <div key={movie.id} className="movie">
+                    <div className="movie-box">
+                        <img className="movie-poster" onClick={() => Details(movie.id)} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}></img>
+                        <button className="movie-buy" onClick={() => addToCart(movie)}> {cart.has(movie.id) ? "Added" : "Buy"} </button>
+                    </div>
                 </div>
+
             ))}
             <div className="movies-pages">
                 <label className="movies-numbers">Page: {page} / {totalPages}</label>
