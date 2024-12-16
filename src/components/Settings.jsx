@@ -65,9 +65,9 @@ function Settings() {
                     <div className="account-title">Edit Profile</div>
                     <form onSubmit={(event) => changeName(event)}>
                         <label className="account-text">First Name:</label>
-                        <input className="account-input" type="text" value={fName} onChange={() => setFName(event.target.value)}></input>
+                        <input className="account-input" type="text" value={fName} onChange={(event) => setFName(event.target.value)}></input>
                         <label className="account-text">Last Name:</label>
-                        <input className="account-input" type="text" value={lName} onChange={() => setLName(event.target.value)}></input>
+                        <input className="account-input" type="text" value={lName} onChange={(event) => setLName(event.target.value)}></input>
                         <label className="account-text">Email:</label>
                         <input className="account-input" type="email" value={email} readOnly></input>
                         <button className="settings-button" type="submit">Confirm Changes</button>

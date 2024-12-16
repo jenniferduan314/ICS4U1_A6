@@ -8,7 +8,7 @@ import { Map } from 'immutable';
 
 function Register() {
     const navigate = useNavigate();
-    const { setFirstName, setLastName, setEmail, setPassword, setGenreList, setLoggedIn, setCart } = useStoreContext();
+    const { setFirstName, setLastName, setEmail, setPassword, genreList, setGenreList, setLoggedIn, setCart } = useStoreContext();
     const firstName = useRef('');
     const lastName = useRef('');
     const email = useRef('');
