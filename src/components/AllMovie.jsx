@@ -33,9 +33,7 @@ function AllMovies() {
     }
 
     function NextPage() {
-        console.log("hi");
         if (page < totalPages) {
-            console.log("hi");
             setPage(page + 1);
         }
     }
