@@ -57,7 +57,8 @@ function Register() {
         setPassword(password.current.value);
         setGenreList(genreSorted);
         setCart(Map());
-        return alert("Account successfully created.");
+        setLoggedIn(true);
+        return navigate(`/movies/genre/${genreSorted[0]}`);
     }
 
     return (
