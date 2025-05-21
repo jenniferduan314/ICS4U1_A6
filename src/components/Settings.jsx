@@ -27,6 +27,8 @@ function Settings() {
         { id: 10752, genre: "War" },
         { id: 37, genre: "Western" }
     ]
+    console.log("Current genreList:", genreList);
+
 
     function changeName(event) {
         event.preventDefault();
@@ -43,8 +45,8 @@ function Settings() {
             .filter((genreId) => checkboxesRef.current[genreId].checked)
             .map(Number);
 
-        if (genreSelected.length < 10) {
-            return alert("Please select at least 10 genres.");
+        if (genreSelected.length < 5) {
+            return alert("Please select at least 5 genres.");
         }
 
         const genreSorted = genreSelected
@@ -76,11 +78,13 @@ function Settings() {
                 <div className="register-item">
                     <div className="account-genre">
                         <div className="account-title">Genre Selection</div>
-                        <label>Please Select At Least 10 Genres</label>
+                        <label>Please Select At Least 5 Genres</label>
                     </div>
                     {genres.map((item) => (
                         <div className="account-genres" key={item.id}>
-                            <input className="account-genres" type="checkbox" id="check" ref={(el) => (checkboxesRef.current[item.id] = el)} />
+                            <input className="account-genres"type="checkbox"id="check"ref={(el) => (checkboxesRef.current[item.id] = el)}defaultChecked={genreList.some((genre) => genre.id === item.id)}
+                            />
+
                             <label className="account-genres">{item.genre}</label>
                         </div>
                     ))}

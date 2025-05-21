@@ -14,6 +14,7 @@ function Login() {
         event.preventDefault();
         if (ema == email && pass == password) {
             setLoggedIn(true);
+            localStorage.setItem("user", "true");
             return navigate(`/movies/genre/${genreList[0].id}`);
         }
     }

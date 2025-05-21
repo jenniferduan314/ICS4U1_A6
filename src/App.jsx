@@ -7,27 +7,35 @@ import GenreView from "./views/GenreView";
 import DetailView from "./views/DetailView";
 import CartView from "./views/CartView.jsx";
 import SettingsView from "./views/SettingsView.jsx";
+import ProtectedView from "./views/ProtectedView.jsx";
+import ErrorView from "./views/ErrorView.jsx";
 import { StoreProvider } from "./context";
 import './App.css';
 
 function App() {
   return (
-    <StoreProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <StoreProvider>
         <Routes>
+         
           <Route path="/" element={<HomeView />} />
           <Route path="/register" element={<RegisterView />} />
           <Route path="/login" element={<LoginView />} />
-          <Route path="/movies" element={<MoviesView />}>
-            <Route path="genre/:id" element={<GenreView />} />
-            <Route path="details/:id" element={<DetailView />} />
+          {/* Protected stuff */}
+          <Route element={<ProtectedView />}>
+            <Route path="/cart" element={<CartView />} />
+            <Route path="/settings" element={<SettingsView />} />
+            <Route path="/movies" element={<MoviesView />}>
+              <Route path="genre/:id" element={<GenreView />} />
+              <Route path="details/:id" element={<DetailView />} />
+            </Route>
           </Route>
-          <Route path="/cart" element={<CartView />} />
-          <Route path="/settings" element={<SettingsView />} />
+          <Route path="*" element={<ErrorView />} />
         </Routes>
-      </BrowserRouter>
-    </StoreProvider>
-  )
+      </StoreProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
+

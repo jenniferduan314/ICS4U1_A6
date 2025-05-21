@@ -12,13 +12,12 @@ function Footer() {
                 <a href="f">Privacy Notice</a>
             </div>
             <div className="footer-grid">
-                <a href="e">Shop</a>
                 <a href="d">Redeem</a>
                 <a href="c">New Deals</a>
             </div>
             <div className="footer-grid">
                 <a href="b">FAQ</a>
-                <a href="a">Contact</a>
+                <a href="a">© Meow Movies!</a>
             </div>
         </div>
     )

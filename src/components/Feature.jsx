@@ -11,13 +11,14 @@ function Features() {
                 `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`
             );
             setMovies(response.data.results);
+            console.log(response.data.results);
         })();
     }, []);
 
     return (
         <div>
             <div className="feature-title">
-                <h2>—— FEATURING ——</h2>
+                <h2>☆☆☆ ─── FEATURING ─── ☆☆☆</h2>
             </div>
             {movies.length > 0 ? (
                 <div className="feature">

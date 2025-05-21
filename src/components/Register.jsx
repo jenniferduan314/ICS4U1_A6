@@ -43,8 +43,8 @@ function Register() {
             .filter((genreId) => checkboxesRef.current[genreId].checked)
             .map(Number);
 
-        if (genreSelected.length < 10) {
-            return alert("Please select at least 10 genres.");
+        if (genreSelected.length < 5) {
+            return alert("Please select at least 5 genres.");
         }
 
         const genreSorted = genreSelected
@@ -58,7 +58,8 @@ function Register() {
         setGenreList(genreSorted);
         setCart(Map());
         setLoggedIn(true);
-        return navigate(`/movies/genre/${genreSorted[0]}`);
+        localStorage.setItem("user", "true");
+        return navigate(`/movies/genre/${genreSorted[0].id}`);
     }
 
     return (
@@ -87,14 +88,21 @@ function Register() {
                 <div className="register-item">
                     <div className="account-genre">
                         <div className="account-title">Genre Selection</div>
-                        <label>Please Select At Least 10 Genres</label>
+                        <label>Please Select At Least 5 Genres</label>
                     </div>
                     {genres.map((item) => (
                         <div className="account-genres" key={item.id}>
-                            <input className="account-genres" type="checkbox" id="check" ref={(el) => (checkboxesRef.current[item.id] = el)} />
+                            <input
+                                className="account-genres"
+                                type="checkbox"
+                                id="check"
+                                defaultChecked={genreList.some((genre) => genre.id === item.id)}
+                                ref={(el) => (checkboxesRef.current[item.id] = el)}
+                            />
                             <label className="account-genres">{item.genre}</label>
                         </div>
                     ))}
+
                 </div>
             </div>
         </div>
