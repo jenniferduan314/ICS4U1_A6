@@ -20,7 +20,7 @@ function Header() {
             <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Staatliches&display=swap" rel="stylesheet">
             </link>
             <div>
-                <img src={WebFlix} alt="Meow Movies" width="150" id="logo" />
+                <img src={MeowMovies} alt="Meow Movies logo" width="150" id="logo" />
                 <div className="header-text" onClick={() => logout()}>
                     <div className="webtitle">「MEOW MOVIES!」</div>
                 </div>

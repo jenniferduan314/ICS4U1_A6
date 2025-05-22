@@ -45,7 +45,7 @@
   white-space: nowrap;
 }
 
-/* Right side of the header: buttons + search bar */
+
 .header-frame {
   display: flex;
   flex-direction: column;
@@ -61,9 +61,9 @@
 }
 
 .signed-buttons {
-  height: 36px;
-  padding: 0 29px;
-  border-radius: 25px;
+  height: 35px;
+  padding: 0 20px;
+  border-radius: 20px;
   border: none;
   background-color: #b00101;
   color: white;

@@ -1,5 +1,5 @@
 .movies-container {
-    min-width: 1200px;
+    min-width: 800px;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
