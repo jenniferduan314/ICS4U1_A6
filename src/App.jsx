@@ -9,6 +9,8 @@ import CartView from "./views/CartView.jsx";
 import SettingsView from "./views/SettingsView.jsx";
 import ProtectedView from "./views/ProtectedView.jsx";
 import ErrorView from "./views/ErrorView.jsx";
+import SearchView from "./views/SearchView";
+
 import { StoreProvider } from "./context";
 import './App.css';
 
@@ -25,6 +27,7 @@ function App() {
           <Route element={<ProtectedView />}>
             <Route path="/cart" element={<CartView />} />
             <Route path="/settings" element={<SettingsView />} />
+            <Route path="/search" element={<SearchView />} />
             <Route path="/movies" element={<MoviesView />}>
               <Route path="genre/:id" element={<GenreView />} />
               <Route path="details/:id" element={<DetailView />} />

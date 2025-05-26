@@ -9,6 +9,26 @@
     text-align: center;
 }
 
+.details-back {
+  position: relative;
+  left: -20px;
+  width: 100px;
+  height: 36px;
+  color: white;
+  background-color: #700303;
+  border: none;
+  font-size: 1rem;
+  font-family: "Staatliches", sans-serif;
+  padding: 5px 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-back:hover {
+  background-color: #7a0000;
+  transform: scale(1.05);
+}
 
 .details-title {
     font-size: 5rem;

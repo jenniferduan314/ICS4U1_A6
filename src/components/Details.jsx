@@ -2,10 +2,13 @@ import "./Details.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function Details() {
     const [movie, setMovie] = useState([]);
     const { id } = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function getDetails() {
@@ -20,6 +23,7 @@ function Details() {
 
     return (
         <div className="details-movie">
+             <button className="details-back" onClick={() => navigate(-1)}>Back</button>
             <h1 className="details-title">☆⋅ {movie.title} ⋅☆</h1>
             <h3 className="details-tagline">{movie.tagline}</h3>
             <p className="details-overview">{movie.overview}</p>
