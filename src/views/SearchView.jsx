@@ -48,7 +48,7 @@ function SearchView() {
 
     return (
         <div className="search-view">
-            <button className="search-back" onClick={() => navigate(-1)}>← Back</button>
+            <button className="search-back" onClick={() => navigate(-1)}>Back</button>
             <input
                 type="text"
                 className="search-input"
