@@ -1,13 +1,13 @@
 .genre-container {
     padding: 2rem;
-    max-width: 250px;
+    max-width: 250;
     margin: 0 auto;
     text-align: center;
 }
 
 .genre-title {
     font-family: "Staatliches", sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     color: rgb(255, 255, 255);
     display: block;
     margin-bottom: 0.1rem;
@@ -17,7 +17,7 @@
 
 .genre-list {
     font-family: "Staatliches", sans-serif;
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     color: white;
     background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
     border: none;
@@ -29,8 +29,7 @@
     box-shadow: 0 4px 8px rgba(61, 59, 59, 0.3);
     position: relative;
     overflow: hidden;
-    min-width: 180px;
-    width: 100%;
+    width: 90%;
     max-width: 250px;
 }
 
@@ -50,7 +49,7 @@
 .genre-list:hover {
     box-shadow: 0 0 20px 5px rgba(198, 0, 0, 0.5);
     z-index: 2;
-    /* No transform scaling */
+    transform: scale(1.05);
 }
 
 .genre-list:hover::before {

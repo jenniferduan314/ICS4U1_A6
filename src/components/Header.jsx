@@ -1,5 +1,5 @@
 import "./Header.css";
-import WebFlix from "../images/weblogo.png";
+import MeowMovies from "../images/weblogo.png";
 import Search from "../images/search.png";
 import { useNavigate } from "react-router";
 import { useStoreContext } from "../context";
@@ -30,7 +30,7 @@ function Header() {
             <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Staatliches&display=swap" rel="stylesheet" />
 
             <div>
-                <img src={WebFlix} alt="Meow Movies" width="150" id="logo" />
+                <img src={MeowMovies} alt="Meow Movies" onClick={() => logout()} width="150" id="logo" />
                 <div className="header-text" onClick={() => logout()}>
                     <div className="webtitle">「MEOW MOVIES!」</div>
                 </div>

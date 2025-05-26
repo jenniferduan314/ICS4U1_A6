@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 10;
@@ -17,7 +17,7 @@
 }
 
 #logo {
-  margin-left: 1.8rem;
+  margin-left: 3.8rem;
   filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
   transition: transform 0.3s ease;
 }
@@ -29,9 +29,9 @@
 .webtitle {
   color: white;
   font-family: "Staatliches", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
-  text-shadow: 0px 0px 100px #2f0303;
+  text-shadow: 0px 0px 80px #2f0303;
 }
 
 /* Welcome message centered in the header */
@@ -62,7 +62,7 @@
 
 .signed-buttons {
   height: 36px;
-  padding: 0 29px;
+  padding: 0 22px;
   border-radius: 25px;
   border: none;
   background-color: #b00101;

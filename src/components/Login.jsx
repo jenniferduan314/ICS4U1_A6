@@ -16,6 +16,8 @@ function Login() {
             setLoggedIn(true);
             localStorage.setItem("user", "true");
             return navigate(`/movies/genre/${genreList[0].id}`);
+        } else {
+            localStorage.setItem("user", "false");
         }
     }
 
