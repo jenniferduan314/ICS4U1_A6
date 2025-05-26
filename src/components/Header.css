@@ -90,13 +90,13 @@
   border-radius: 20px;
   border: none;
   font-family: "Arimo", sans-serif;
-  width: 200px;
+  width: 175px;
   transition: width 0.3s ease;
 }
 
 #search-bar:focus {
   outline: none;
-  width: 250px;
+  width: 200px;
 }
 
 #search-button {
