@@ -14,4 +14,5 @@ function Genres(prop) {
     )
 }
 
+
 export default Genres;

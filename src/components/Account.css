@@ -31,7 +31,7 @@
 }
 
 .account-no:hover {
-    color: #00fb82;
+    color: #ececec;
 }
 
 .account-button {
@@ -48,5 +48,5 @@
 }
 
 .account-button:hover {
-    background-color: #00984f;
+    background-color: #177045;
 }
